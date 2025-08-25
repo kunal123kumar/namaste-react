@@ -1,0 +1,180 @@
+/* === Base Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", cursive, sans-serif;
+}
+
+body {
+  background: #f9fafb; /* light gray background */
+  color: #111827; /* neutral text */
+  line-height: 1.5;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+#container {
+  padding: 16px;
+  max-width: 1280px;
+  margin: auto;
+}
+
+/* === Header === */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #e5e7eb;
+  padding: 12px 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.logo {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-items ul {
+  display: flex;
+  list-style: none;
+  gap: 28px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nav-items li {
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-items li:hover {
+  background: #eef2ff; /* light indigo */
+  color: #4f46e5; /* indigo */
+}
+
+/* === Body === */
+.body {
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+/* === Search Bar === */
+.search-container {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.search-input {
+  flex: 1;
+  height: 44px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0 14px;
+  font-size: 16px;
+}
+
+.search-input:focus {
+  border-color: #4f46e5;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+.search-btn {
+  width: 20%;
+  background: #4f46e5;
+  color: white;
+  font-weight: 500;
+  border: none;
+  height: 44px;
+  border-radius: 8px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.search-btn:hover {
+  background: #4338ca;
+}
+
+/* === Cards Grid === */
+.restaurant-list,
+.food-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+  width: 100%;
+}
+
+/* === Common Card Style === */
+.card,
+.cardFood {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+
+.card:hover,
+.cardFood:hover {
+  border-color: #4f46e5;
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.2);
+  transform: translateY(-4px);
+}
+
+/* === Card Images === */
+.card img,
+.cardFood img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* === Card Text === */
+.card h2,
+.cardFood h2 {
+  font-size: 20px;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.card p,
+.cardFood p,
+.cardFood h5 {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+
+/* === Button inside cards === */
+.filter-btn {
+  width: 20%;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+  background: #4338ca;
+}
